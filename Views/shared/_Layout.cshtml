@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LC - @ViewBag.Title</title>
+    <link rel="stylesheet" asp-href-include="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" asp-href-include="/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" asp-href-include="/styles/custom.css" />
+
+</head>
+<body>
+    <div class="container-fluid my-dark sticky-top">
+        <div class="container">
+            <div class="navbar navbar-expand-md justify-content-between">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <h2 class="navbar-brand">LEARNINGCODING</h2>
+                </a>
+
+                <div>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#my-navbar">
+                        <img src="~/images/list.png" />
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="my-navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+    <div class="container pt-4">
+        <hr class="bg-light"/>
+        <p class="text-light">&copy;Pleasure Ndhlovu 2021</p>
+    </div>
+
+    <script asp-src-include="/lib/jquery/jquery.slim.min.js"></script>
+    <script asp-src-include="/lib/popper.js/popper.min.js"></script>
+    <script asp-src-include="/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
