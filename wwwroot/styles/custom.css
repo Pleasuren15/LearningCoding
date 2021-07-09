@@ -24,6 +24,22 @@ body {
     color: #e3ff51;
 }
 
+/*.my-color1 {
+    background-color: #3B837E;
+}
+
+.my-color2 {
+    background-color: #256E92;
+}
+
+.my-color3 {
+    background-color: #CC4B7F;
+}
+
+.my-color4 {
+    background-color: #20895C;
+}*/
+
 .bg-circle1, .bg-circle2, .bg-circle3{
     width: 25vh;
     height: 25vh;
@@ -88,16 +104,15 @@ top : 15%;
 
 .programming-language-card:hover{
     transform:scale(1.025);
-    border: 0.5px solid white;
 }
 
-.programming-language-card-top{
-    background-color:white;
+.programming-language-card-top {
     height: 35vh;
     border-radius: 7px 7px 0 0;
-    display:grid;
-    justify-content:center;
-    align-items:center;
+    background-color: #256E92;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .programming-language-card h2 {
