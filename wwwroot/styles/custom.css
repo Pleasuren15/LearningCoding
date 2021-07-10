@@ -20,27 +20,15 @@ body {
     color: #fff;
 }
 
-.nav-link:hover {
-    color: #e3ff51;
+    .nav-link:hover {
+        color: #e3ff51;
+    }
+
+.my-color1 {
+    background-color: #155C66;
 }
 
-/*.my-color1 {
-    background-color: #3B837E;
-}
-
-.my-color2 {
-    background-color: #256E92;
-}
-
-.my-color3 {
-    background-color: #CC4B7F;
-}
-
-.my-color4 {
-    background-color: #20895C;
-}*/
-
-.bg-circle1, .bg-circle2, .bg-circle3{
+.bg-circle1, .bg-circle2, .bg-circle3 {
     width: 25vh;
     height: 25vh;
     border: 2px solid #16171D;
@@ -60,10 +48,10 @@ body {
     top: -5%;
 }
 
-.bg-circle3{
-position:absolute;
-right: 0%;
-top : 15%;
+.bg-circle3 {
+    position: absolute;
+    right: 0%;
+    top: 15%;
 }
 
 /*Home/Index.cshtml*/
@@ -83,27 +71,26 @@ top : 15%;
     text-align: center;
 }
 
-    .programming-categories a {
-        color: crimson;
-        text-decoration: none;
-    }
-
+.programming-categories a {
+    color: crimson;
+    text-decoration: none;
+}
 
 .programming-languages {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin-top:25px;
+    margin-top: 25px;
 }
 
 .programming-language-card {
     background-color: #16171D;
     border-radius: 7px;
-    transition:1.5s;
+    transition: 1.5s;
 }
 
-.programming-language-card:hover{
-    transform:scale(1.025);
+.programming-language-card:hover {
+    transform: scale(1.025);
 }
 
 .programming-language-card-top {
@@ -118,17 +105,62 @@ top : 15%;
 .programming-language-card h2 {
     font: 400 24px 'Anton', sans-serif;
     margin: 12px;
-    color:white;
+    color: white;
     line-height: 10px;
 }
 
-.programming-language-card a{
+.programming-language-card p {
     font-size: 16px;
     margin: 10px;
     color: crimson;
 }
 
+/*Home/LanguageInfo.cshtml*/
+.language-info-intro {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    height: 30vh;
+}
+
+.language-info-intro-header {
+    font: 400 40px 'Anton', sans-serif;
+    color: white;
+}
+
+.language-info-intro-image {
+    margin: auto;
+}
+
+.header-text-content {
+    color: white;
+    padding: 10px;
+    margin:10px;
+    background-color: #16171D;
+    border-radius : 5px 0 0 5px;
+    border-left : 4px solid crimson;
+ }
+
+.header-text-content h2 {
+    font: 400 30px 'Anton', sans-serif;
+}
+
+.header-text-content p {
+    font-size: 18px;
+}
+
+.pros-cons{
+    display:grid;
+    grid-template-columns: repeat(3 , 1fr);
+    font-size:16px;
+    grid-gap: 10px;
+}
+
+.pros-cons-num{
+    line-height: 5px;
+}
 
 ::selection {
     background-color: yellow;
+    color: black;
 }

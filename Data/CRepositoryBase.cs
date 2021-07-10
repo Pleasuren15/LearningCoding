@@ -8,7 +8,7 @@ namespace LearningCoding.Data
 {
     public class CRepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        AppDbContext _appDbContext;
+        protected AppDbContext _appDbContext;
 
         public CRepositoryBase(AppDbContext appDbContext)
         {

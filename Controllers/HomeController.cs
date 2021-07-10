@@ -17,9 +17,21 @@ namespace LearningCoding.Controllers
         {
             _repositoryWrapper = repositoryWrapper;
         }
-        public IActionResult Index()
+        public IActionResult Index(string category = "All")
         {
-            return View(_repositoryWrapper._repositoryProgramming.FindAll());
+            if (category == "All")
+                return View(_repositoryWrapper._repositoryProgramming.FindAll());
+            else if (category == "Low-level")
+                return View(_repositoryWrapper._repositoryProgramming.
+                    FindByCondition(e => e.ProgrammingLanguageCategory == category));
+            else
+                return View(_repositoryWrapper._repositoryProgramming.
+                    FindByCondition(e => e.ProgrammingLanguageCategory == category));
+        }
+
+        public IActionResult LanguageInfo(int Id)
+        {
+            return View(_repositoryWrapper._repositoryProgramming.GetLanguagesWithProsAndCons(Id));
         }
     }
 }

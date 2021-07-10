@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LearningCoding.Models
 {
@@ -10,9 +11,10 @@ namespace LearningCoding.Models
         public string ProgrammingLanguageImageUrl { get; set; }
         public string ProgrammingLanguageCategory { get; set; }
         public string ProgrammingLanguageOverview { get; set; }
-        public string ProgrammingLanguagePros { get; set; }
-        public string ProgrammingLanguageCons { get; set; }
         public string ProgrammingLanguageHistory { get; set; }
         public string ProgrammingLanguageDescription { get; set; }
+
+        public ICollection<ProgrammingLanguagePros> ProgrammingLanguagePros { get; set; }
+        public ICollection<ProgrammingLanguageCons> ProgrammingLanguageCons { get; set; }
     }
 }

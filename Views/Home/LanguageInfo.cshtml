@@ -1,0 +1,55 @@
+﻿@model ProgrammingLanguage
+
+@{
+    ViewData["Title"] = Model.ProgrammingLanguageName;
+}
+
+<div class="container-fluid ">
+    <partial name="_NavbarPartial" />
+    <div class="container">
+    </div>
+</div>
+
+<div class="container">
+    <div class="language-info-intro">
+        <div class="language-info-intro-image">
+            <img src="@Model.ProgrammingLanguageImageUrl" alt="@Model.ProgrammingLanguageName" />
+        </div>
+        <div class="language-info-intro-header">
+            <h1>@Model.ProgrammingLanguageName</h1>
+        </div>
+    </div>
+    <div class="header-text-content">
+        <h2>Overview</h2>
+        <p>@Model.ProgrammingLanguageOverview</p>
+    </div>
+
+    <div class="header-text-content">
+        <h2>History</h2>
+        <p>@Model.ProgrammingLanguageHistory</p>
+    </div>
+
+    <div class="header-text-content">
+        <h2>Advantages</h2>
+        <div class="pros-cons">
+            @foreach (var p in Model.ProgrammingLanguagePros)
+            {
+                <div>
+                    <p>• @p.ProgrammingLanguageProsDesc</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="header-text-content">
+        <h2>Disadvantages</h2>
+        <div class="pros-cons">
+            @foreach (var p in Model.ProgrammingLanguageCons)
+            {
+                <div>
+                    <p>• @p.ProgrammingLanguageConsDesc</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
