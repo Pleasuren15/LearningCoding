@@ -27,7 +27,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "C#",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "C# (pronounced \"C - sharp\") is an object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.tutorialsteacher.com/csharp/csharp-tutorials",
                     ProgrammingLanguageHistory = "C# was developed by Microsoft within its .NET framework initiative and later approved as a standard by ECMA (ECMA-334) C# programming language is a general-purpose, OOPS based programming language. C# development team was lead by \"Anders Hejlsberg\" in 2002",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/c-sharp-logo.png"
                 },
@@ -37,7 +37,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "HTML",
                     ProgrammingLanguageCategory = "Low-level",
                     ProgrammingLanguageOverview = "HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages. As its name suggests, HTML is a Markup Language which means you use HTML to simply \"mark - up\" a text document with tags that tell a Web browser how to structure it to display",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://html.com/",
                     ProgrammingLanguageHistory = "The first version of HTML was written by Tim Berners-Lee in 1993. Since then, there have been many different versions of HTML. The most widely used version throughout the 2000's was HTML 4.01, which became an official standard in December 1999. Another version, XHTML, was a rewrite of HTML as an XML language",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/html-5--v1.png"
                 },
@@ -47,7 +47,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "Python",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://docs.python.org/3/tutorial/",
                     ProgrammingLanguageHistory = "Python was conceived in the late 1980s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to ABC programming language, which was inspired by SETL, capable of exception handling and interfacing with the Amoeba operating system. Its implementation began in December 1989",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/python--v1.png"
                 },
@@ -57,7 +57,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "Java",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "Java is a simple, general-purpose, object-oriented, interpreted, robust, secure, architecture-neutral, portable, high-performance, multithreaded computer language. ... Java technology is both a programming language and a platform. Java is a high level, robust, secured and object-oriented programming language",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.tutorialspoint.com/java/index.htm",
                     ProgrammingLanguageHistory = "Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle) and released in 1995 as a core component of Sun Microsystems' Java platform",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/java-coffee-cup-logo--v1.png"
                 },
@@ -67,7 +67,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "C++",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural, object-oriented, and generic programming. C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.w3schools.com/CPP/default.asp",
                     ProgrammingLanguageHistory = "Before the initial standardization in 1998, C++ was developed by Danish computer scientist Bjarne Stroustrup at Bell Labs since 1979 as an extension of the C language; he wanted an efficient and flexible language similar to C that also provided high-level features for program organization",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/c-plus-plus-logo.png"
                 },
@@ -77,7 +77,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "JavaScript",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. It is an interpreted programming language with object-oriented capabilities.",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.w3schools.com/js/",
                     ProgrammingLanguageHistory = "In September 1995, a Netscape programmer named Brandan Eich developed a new scripting language in just 10 days. It was originally named Mocha, but quickly became known as LiveScript and, later, JavaScript.",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/javascript--v1.png"
                 },
@@ -87,7 +87,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "React",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time. ... React can also render on the server using Node, and it can power native apps using React Native.",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://reactjs.org/tutorial/tutorial.html",
                     ProgrammingLanguageHistory = "React was created by Jordan Walke, a software engineer at Facebook, who released an early prototype of React called \"FaxJS\". He was influenced by XHP, an HTML component library for PHP. It was first deployed on Facebook's News Feed in 2011 and later on Instagram in 2012. It was open-sourced at JSConf US in May 2013.",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/react-native.png"
                 },
@@ -97,7 +97,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "Angular",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.tektutorialshub.com/angular-tutorial/",
                     ProgrammingLanguageHistory = "AngularJS was originally developed in 2009 by Miško Hevery at Brat Tech LLC as the software behind an online JSON storage service, that would have been priced by the megabyte, for easy-to-make applications for the enterprise.",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/angularjs.png"
                 },
@@ -107,7 +107,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "PHP",
                     ProgrammingLanguageCategory = "Low-level",
                     ProgrammingLanguageOverview = "PHP is an intuitive, server side scripting language. Like any other scripting language it allows developers to build logic into the creation of web page content and handle data returned from a web browser. PHP also contains a number of extensions that make it easy to interact with databases, extracting data to be displayed on a web page and storing information entered by a web site visitor back into the database.",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.w3schools.com/php/DEFAULT.asp",
                     ProgrammingLanguageHistory = "PHP was conceived sometime in the fall of 1994 by Rasmus Lerdorf. Early non-released versions were used on his home page to keep track of who was looking at his online resume. The first version used by others was available sometime in early 1995 and was known as the Personal Home Page Tools.",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/offices/175/000000/php-logo.png"
                 },
@@ -117,7 +117,7 @@ namespace LearningCoding.Data
                     ProgrammingLanguageName = "Swift",
                     ProgrammingLanguageCategory = "High-level",
                     ProgrammingLanguageOverview = "Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design, yet also produces software that runs lightning-fast.",
-                    ProgrammingLanguageDescription = "",
+                    ProgrammingLanguageTutorials = "https://www.tutorialspoint.com/swift/index.htm",
                     ProgrammingLanguageHistory = "Development of Swift started in July 2010 by Chris Lattner, with the eventual collaboration of many other programmers at Apple.Swift took language ideas \"from Objective-C, Rust, Haskell, Ruby, Python, C#, CLU, and far too many others to list\"",
                     ProgrammingLanguageImageUrl = "https://img.icons8.com/color/175/000000/swift.png"
                 }

@@ -160,6 +160,15 @@ body {
     line-height: 5px;
 }
 
+.tut-links{
+    font-size: 18px;
+    color : crimson;
+}
+
+.tut-links:hover{
+    color:crimson;
+}
+
 ::selection {
     background-color: yellow;
     color: black;
