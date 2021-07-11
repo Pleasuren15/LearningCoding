@@ -75,4 +75,5 @@ C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.MvcApplicationPartsAssemblyInfo.cache
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Home\LanguageInfo.cshtml.g.cs
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\shared\_NavbarPartial.cshtml.g.cs
+C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Home\Info.cshtml.g.cs
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.csprojAssemblyReference.cache

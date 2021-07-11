@@ -56,10 +56,12 @@ body {
 
 /*Home/Index.cshtml*/
 .home-intro {
+    font-family: 'Anton', sans-serif;
     height: 26vh;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 15px;
 }
 
 .programming-categories {
@@ -71,10 +73,10 @@ body {
     text-align: center;
 }
 
-.programming-categories a {
-    color: crimson;
-    text-decoration: none;
-}
+    .programming-categories a {
+        color: crimson;
+        text-decoration: none;
+    }
 
 .programming-languages {
     display: grid;
@@ -89,9 +91,9 @@ body {
     transition: 1.5s;
 }
 
-.programming-language-card:hover {
-    transform: scale(1.025);
-}
+    .programming-language-card:hover {
+        transform: scale(1.025);
+    }
 
 .programming-language-card-top {
     height: 35vh;
@@ -135,38 +137,78 @@ body {
 .header-text-content {
     color: white;
     padding: 10px;
-    margin:10px;
+    margin: 10px;
     background-color: #16171D;
-    border-radius : 5px 0 0 5px;
-    border-left : 4px solid crimson;
- }
-
-.header-text-content h2 {
-    font: 400 30px 'Anton', sans-serif;
+    border-radius: 5px 0 0 5px;
+    border-left: 4px solid crimson;
 }
 
-.header-text-content p {
-    font-size: 18px;
-}
+    .header-text-content h2 {
+        font: 400 30px 'Anton', sans-serif;
+    }
 
-.pros-cons{
-    display:grid;
-    grid-template-columns: repeat(3 , 1fr);
-    font-size:16px;
+    .header-text-content p {
+        font-size: 18px;
+    }
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 16px;
     grid-gap: 10px;
 }
 
-.pros-cons-num{
+.pros-cons-num {
     line-height: 5px;
 }
 
-.tut-links{
+.tut-links {
     font-size: 18px;
-    color : crimson;
+    color: crimson;
 }
 
-.tut-links:hover{
-    color:crimson;
+    .tut-links:hover {
+        color: crimson;
+    }
+
+/*Home/Info.cshtml*/
+.info-img {
+    margin: 15px;
+    color: white;
+}
+
+    .info-img img {
+        width: 100%;
+        border-radius: 7px;
+    }
+
+    .info-img p {
+        font-size: 16px;
+    }
+
+    .info-img a, .info-img a:hover {
+        color: crimson;
+    }
+
+.info-share h1, .share-display {
+    color: white;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.share-display {
+    display: flex;
+}
+
+.share-link {
+    background-color: #16171D;
+    width: 10vh;
+    height: 10vh;
+    margin: 7px;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
 
 ::selection {

@@ -33,5 +33,10 @@ namespace LearningCoding.Controllers
         {
             return View(_repositoryWrapper._repositoryProgramming.GetLanguagesWithProsAndCons(Id));
         }
+
+        public IActionResult Info()
+        {
+            return View();
+        }
     }
 }
