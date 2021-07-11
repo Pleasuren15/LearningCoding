@@ -8,7 +8,8 @@ namespace LearningCoding.Data.Wrapper
     public class CRepositoryWrapper : IRepositoryWrapper
     {
         AppDbContext _appDbContext { get; set; }
-        IRepositoryProgrammingLanguage _repositoryProgrammingLanguage;
+        IRepositoryProgrammingLanguage repositoryProgrammingLanguage;
+        IRepositoryFeedback repositoryFeedback;
 
         public CRepositoryWrapper(AppDbContext appDbContext)
         {
@@ -19,11 +20,22 @@ namespace LearningCoding.Data.Wrapper
         {
             get 
             {
-                if (_repositoryProgrammingLanguage == null)
-                    _repositoryProgrammingLanguage = new CRepositoryProgrammingLanguage(_appDbContext);
-                return _repositoryProgrammingLanguage;
+                if (repositoryProgrammingLanguage == null)
+                    repositoryProgrammingLanguage = new CRepositoryProgrammingLanguage(_appDbContext);
+                return repositoryProgrammingLanguage;
             } 
         }
+
+        public IRepositoryFeedback _repositoryFeedback
+        {
+            get
+            {
+                if (repositoryFeedback == null)
+                    repositoryFeedback = new CRepositoryFeedback(_appDbContext);
+                return repositoryFeedback;
+            }
+        }
+
 
     }
 }

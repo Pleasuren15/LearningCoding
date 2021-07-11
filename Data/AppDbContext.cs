@@ -13,12 +13,14 @@ namespace LearningCoding.Data
         public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
         public DbSet<ProgrammingLanguageCons> ProgrammingLanguageCons { get; set; }
         public DbSet<ProgrammingLanguagePros> ProgrammingLanguagesPros { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ProgrammingLanguageCons>().ToTable("ProgrammingLanguageCon");
             modelBuilder.Entity<ProgrammingLanguage>().ToTable("ProgrammingLanguage");
             modelBuilder.Entity<ProgrammingLanguagePros>().ToTable("ProgrammingLanguagePro");
-            modelBuilder.Entity<ProgrammingLanguageCons>().ToTable("ProgrammingLanguageCon");
+            modelBuilder.Entity<Feedback>().ToTable("Feedback");
 
             modelBuilder.Entity<ProgrammingLanguage>().HasData(
                 new ProgrammingLanguage()

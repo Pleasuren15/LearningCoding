@@ -14,14 +14,15 @@ body {
 
 .navbar-brand {
     font: 400 30px 'Anton', sans-serif;
+    color:crimson;
 }
 
-.navbar-brand, .nav-link {
+.nav-link {
     color: #fff;
 }
 
     .nav-link:hover {
-        color: #e3ff51;
+        color: crimson;
     }
 
 .my-color1 {
@@ -209,6 +210,15 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
+}
+
+.contact{
+    margin : 15px;
+    color:white;
+}
+
+.contact h1 {
+    font-weight: 700;
 }
 
 ::selection {

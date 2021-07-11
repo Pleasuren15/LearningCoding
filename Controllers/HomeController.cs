@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LearningCoding.Data.Wrapper;
+using LearningCoding.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -36,6 +37,17 @@ namespace LearningCoding.Controllers
 
         public IActionResult Info()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Info(Feedback feedback)
+        {
+            if(ModelState.IsValid)
+            {
+                _repositoryWrapper._repositoryFeedback.Create(feedback);
+                _repositoryWrapper._repositoryFeedback.Save();
+            }
             return View();
         }
     }
