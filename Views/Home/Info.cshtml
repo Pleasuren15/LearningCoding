@@ -22,10 +22,14 @@
         <img src="https://wallpapercave.com/wp/wp3647549.jpg"
              class="d-block mx-auto img-fluid" alt="Programming Languages" />
         <p>source: <a href="https://wallpapercave.com/" target="_blank">wallpapercave.com</a></p>
+
+        <p><span class="font-weight-bold">What Coding Is? </span><br />Coding is basically the computer language used to develop apps, websites, and software. Without it, we’d have none of the most popular technology we’ve come to rely on such as Facebook, our smartphones, the browser we choose to view our favorite blogs, or even the blogs themselves. It all runs on code.</p>
+
+        <p><span class="font-weight-bold">How coding works? </span><br /> To put it very simply, the code is what tells your computer what to do. To go a bit deeper, computers don’t understand words. They only understand the concepts of on and off. The capabilities of a computer are guided by on and off switches, or transistors. Binary code represents these on and off transistors as the digits 1 and 0. An infinite number of combinations of these codes make your computer work. In order to make binary code manageable, computer programming languages were formed. These languages each serve different purposes, but they all allow programmers to translate important commands into binary code.</p>
     </div>
 
     <div class="info-share">
-        <h1>Share this project</h1>
+        <p class="font-weight-bold">Share this project</p>
         <div class="share-display">
             <div class="share-link"><img src="https://img.icons8.com/color/38/000000/twitter--v1.png" /></div>
             <div class="share-link"><img src="https://img.icons8.com/color/38/000000/facebook-new.png" /></div>
@@ -35,13 +39,13 @@
     </div>
 
     <div class="contact">
-        <h1>Contact us</h1>
+        <p class="font-weight-bold">Contact us</p>
         <p>Feel free to reach our deskteam, with feedback or additional comments</p>
         <form asp-controller="Home" asp-action="Info">
             <div asp-validation-summary="All" class="text-danger ml-4"></div>
             <div class="row">
                 <div class="col-md-4 form-group">
-                    <input asp-for="@Model.FeedbackName"  class="form-control" type="text" placeholder="Name" />
+                    <input asp-for="@Model.FeedbackName" class="form-control" type="text" placeholder="Name" />
                 </div>
                 <div class="col-md-4 form-group">
                     <input asp-for="@Model.FeedbackEmail" class="form-control" type="text" placeholder="Email" />
@@ -55,8 +59,8 @@
                 <textarea asp-for="@Model.FeedbackMessage" class="form-control" rows="8" placeholder="Your message..."></textarea>
             </div>
 
-            <div class="form-group">
-                <button class="btn btn-outline-danger mt-2" type="submit">Send</button>
+            <div class="form-group mt-1">
+                <button class="btn btn-outline-danger" type="submit">Send</button>
             </div>
         </form>
     </div>

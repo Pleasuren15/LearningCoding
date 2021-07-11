@@ -50,5 +50,10 @@ namespace LearningCoding.Controllers
             }
             return View();
         }
+
+        public IActionResult Books()
+        {
+            return View();
+        }
     }
 }
