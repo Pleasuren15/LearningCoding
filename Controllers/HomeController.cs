@@ -46,7 +46,7 @@ namespace LearningCoding.Controllers
             if(ModelState.IsValid)
             {
                 _repositoryWrapper._repositoryFeedback.Create(feedback);
-                _repositoryWrapper._repositoryFeedback.Save();
+                return RedirectToAction("Info", "Home");
             }
             return View();
         }

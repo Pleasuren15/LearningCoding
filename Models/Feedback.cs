@@ -17,18 +17,18 @@ namespace LearningCoding.Models
 
         [Required]
         [DisplayName("Name")]
-        public int FeedbackName { get; set; }
+        public string FeedbackName { get; set; }
 
         [Required]
         [DisplayName("Email")]
-        public int FeedbackEmail { get; set; }
+        public string FeedbackEmail { get; set; }
 
         [Required]
         [DisplayName("Subject")]
-        public int FeedbackSubject { get; set; }
+        public string FeedbackSubject { get; set; }
 
         [Required]
         [DisplayName("Message")]
-        public int FeedbackMessage { get; set; }
+        public string FeedbackMessage { get; set; }
     }
 }

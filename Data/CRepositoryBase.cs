@@ -18,6 +18,7 @@ namespace LearningCoding.Data
         public void Create(T element)
         {
             _appDbContext.Set<T>().Add(element);
+            _appDbContext.SaveChanges();
         }
 
         public IEnumerable<T> FindAll()
@@ -38,6 +39,7 @@ namespace LearningCoding.Data
         public void Remove(T element)
         {
             _appDbContext.Set<T>().Remove(element);
+            _appDbContext.SaveChanges();
         }
 
         public void Save()
@@ -48,6 +50,7 @@ namespace LearningCoding.Data
         public void Update(T element)
         {
             _appDbContext.Set<T>().Update(element);
+            _appDbContext.SaveChanges();
         }
     }
 }
