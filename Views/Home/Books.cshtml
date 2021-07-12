@@ -1,15 +1,33 @@
-﻿@{
+﻿@model IEnumerable<Book>
+
+@{
     ViewData["Title"] = "Books";
 }
 
-<div class="container-fluid ">
-    <partial name="_NavbarPartial" />
+<div class="container-fluid bg-index">
+    <div class="bg-tans">
+        <partial name="_NavbarPartial">
+            <div class="container">
+                <div class="home-intro">
+                    <h2 class="text-light">
+                        A variety of books to enhance in your learning of coding.
+                    </h2>
+                </div>
+            </div>
+    </div>
 </div>
 
 <div class="container">
-    <div class="home-intro">
-        <h2 class="text-light">
-            A variety of books to enhance in your learning of coding.
-        </h2>
+    <form>
+        <input type="text" class="form-control" placeholder="search..." />
+    </form>
+    <h6 class="font-weight-bold-2 text-success">*clicking on the image will automatically download book.</h6>
+    <div class="books-dis">
+        @foreach (var b in Model)
+        {
+            <a href="@b.BookDownloadUrl">
+                <img src="@b.BookUrlImage" alt="@b.BookUrlImage" />
+            </a>
+        }
     </div>
 </div>

@@ -22,19 +22,6 @@ namespace LearningCoding.Models
         public string BookUrlImage { get; set; }
 
         [Required]
-        [DisplayName("Language")]
-        public string BookLanguage { get; set; }
-
-        [Required]
-        [DisplayName("Year")]
-        public string BookYear { get; set; }
-
-        [Required]
-        [DisplayName("Rating")]
-        [Range(1, 5)]
-        public int BookRating { get; set; }
-
-        [Required]
         [DisplayName("Download url")]
         [Range(1, 5)]
         public string BookDownloadUrl { get; set; }

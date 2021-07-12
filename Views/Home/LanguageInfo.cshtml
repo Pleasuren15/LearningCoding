@@ -4,19 +4,24 @@
     ViewData["Title"] = Model.ProgrammingLanguageName;
 }
 
-<div class="container-fluid ">
-    <partial name="_NavbarPartial" />
+<div class="container-fluid bg-index">
+    <div class="bg-tans">
+        <partial name="_NavbarPartial">
+            <div class="container">
+                <div class="language-info-intro">
+                    <div class="language-info-intro-image">
+                        <img src="@Model.ProgrammingLanguageImageUrl" alt="@Model.ProgrammingLanguageName" />
+                    </div>
+                    <div class="language-info-intro-header">
+                        <h1>@Model.ProgrammingLanguageName</h1>
+                    </div>
+                </div>
+            </div>
+    </div>
 </div>
 
 <div class="container">
-    <div class="language-info-intro">
-        <div class="language-info-intro-image">
-            <img src="@Model.ProgrammingLanguageImageUrl" alt="@Model.ProgrammingLanguageName" />
-        </div>
-        <div class="language-info-intro-header">
-            <h1>@Model.ProgrammingLanguageName</h1>
-        </div>
-    </div>
+
 
     <div class="header-text-content">
         <h2>Overview</h2>

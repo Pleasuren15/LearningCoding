@@ -11,10 +11,22 @@ body {
     background-color: #101014;
 }
 
+.bg-tans {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.bg-index {
+    background-image: url(https://images.unsplash.com/photo-1422493757035-1e5e03968f95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin-bottom: 15px;
+    background-attachment: fixed;
+}
 
 .navbar-brand {
     font: 400 30px 'Anton', sans-serif;
-    color:crimson;
+    color: crimson;
 }
 
 .nav-link {
@@ -180,7 +192,7 @@ body {
 
     .info-img img {
         width: 100%;
-        height : 55vh;
+        height: 55vh;
         border-radius: 7px;
     }
 
@@ -209,18 +221,38 @@ body {
     align-content: center;
 }
 
-.contact{
-    margin : 15px;
-    color:white;
+.contact {
+    margin: 15px;
+    color: white;
 }
 
-.contact h1 {
-    font-weight: 700;
-}
+    .contact h1 {
+        font-weight: 700;
+    }
 
-.font-weight-bold{
+.font-weight-bold {
     font-size: 30px;
 }
+
+.font-weight-bold-2 {
+    font-size: 15px;
+    font-weight:700;
+}
+/*Home/Books.cshtml*/
+.books-dis {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+}
+
+    .books-dis img {
+        height: 250px;
+        width: 90%;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
 
 ::selection {
     background-color: yellow;

@@ -14,6 +14,7 @@ namespace LearningCoding.Data
         public DbSet<ProgrammingLanguageCons> ProgrammingLanguageCons { get; set; }
         public DbSet<ProgrammingLanguagePros> ProgrammingLanguagesPros { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +22,7 @@ namespace LearningCoding.Data
             modelBuilder.Entity<ProgrammingLanguage>().ToTable("ProgrammingLanguage");
             modelBuilder.Entity<ProgrammingLanguagePros>().ToTable("ProgrammingLanguagePro");
             modelBuilder.Entity<Feedback>().ToTable("Feedback");
+            modelBuilder.Entity<Book>().ToTable("Book");
 
             modelBuilder.Entity<ProgrammingLanguage>().HasData(
                 new ProgrammingLanguage()
@@ -256,25 +258,25 @@ namespace LearningCoding.Data
                 },
                 new ProgrammingLanguagePros()
                 {
-                    ProgrammingLanguageProsId =20,
+                    ProgrammingLanguageProsId = 20,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageProsDesc = "Python is a very productive language. Due to the simplicity of Python, developers can focus on solving the problem. They don’t need to spend too much time in understanding the syntax or behavior of the programming language. You write less code and get more things done."
                 },
                 new ProgrammingLanguagePros()
                 {
-                    ProgrammingLanguageProsId =21,
+                    ProgrammingLanguageProsId = 21,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageProsDesc = "Interpreted Language"
                 },
                 new ProgrammingLanguagePros()
                 {
-                    ProgrammingLanguageProsId =22,
+                    ProgrammingLanguageProsId = 22,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageProsDesc = "The standard library of Python is huge, you can find almost all the functions needed for your task. So, you don’t have to depend on external libraries."
                 },
                 new ProgrammingLanguagePros()
                 {
-                    ProgrammingLanguageProsId =23,
+                    ProgrammingLanguageProsId = 23,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageProsDesc = "In many languages like C/C++, you need to change your code to run the program on different platforms. That is not the same with Python. You only write once and run it anywhere."
                 });
@@ -282,27 +284,72 @@ namespace LearningCoding.Data
             modelBuilder.Entity<ProgrammingLanguageCons>().HasData(
                 new ProgrammingLanguageCons()
                 {
-                    ProgrammingLanguageConsId =24,
+                    ProgrammingLanguageConsId = 24,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageConsDesc = "We discussed above that Python is an interpreted language and dynamically-typed language. The line by line execution of code often leads to slow execution."
                 },
                 new ProgrammingLanguageCons()
                 {
-                    ProgrammingLanguageConsId =25,
+                    ProgrammingLanguageConsId = 25,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageConsDesc = "To provide simplicity to the developer, Python has to do a little tradeoff. The Python programming language uses a large amount of memory. This can be a disadvantage while building applications when we prefer memory optimization."
                 },
                 new ProgrammingLanguageCons()
                 {
-                    ProgrammingLanguageConsId =26,
+                    ProgrammingLanguageConsId = 26,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageConsDesc = "Programming in Python is easy and stress-free. But when we are interacting with the database, it lacks behind."
                 },
                 new ProgrammingLanguageCons()
                 {
-                    ProgrammingLanguageConsId =27,
+                    ProgrammingLanguageConsId = 27,
                     ProgrammingLanguageId = 3,
                     ProgrammingLanguageConsDesc = "As we know Python is a dynamically typed language so the data type of a variable can change anytime. A variable containing integer number may hold a string in the future, which can lead to Runtime Errors."
+                });
+            #endregion
+
+            #region Books
+            modelBuilder.Entity<Book>().HasData(
+                new Book()
+                {
+                    BookId = 1,
+                    BookTitle = "Modern Full-Stack Development: Using TypeScript, React, Node.js, Webpack, and Docker",
+                    BookUrlImage = "https://covers.zlibcdn2.com/covers299/books/6e/45/e4/6e45e486274523acce569f1f08a3b473.jpg",
+                    BookDownloadUrl = "https://za1lib.org/dl/5430455/eece3f"
+                },
+                new Book()
+                {
+                    BookId = 2,
+                    BookTitle = "JavaScript and JQuery: Interactive Front-End Web Development",
+                    BookUrlImage = "https://covers.zlibcdn2.com/covers299/books/26/c3/03/26c303a8f1e8881a7a6bd59d57a76aef.jpg",
+                    BookDownloadUrl = "https://za1lib.org/dl/2475034/1cad05?dsource=recommend"
+                },
+                new Book()
+                {
+                    BookId = 3,
+                    BookTitle = "HTML and CSS: Design and Build Websites",
+                    BookUrlImage = "https://covers.zlibcdn2.com/covers/books/f2/f2/31/f2f231b39e648d7db773fe8c02e87132.jpg",
+                    BookDownloadUrl = "https://za1lib.org/dl/1304587/324ac0?dsource=recommend"
+                },
+                new Book()
+                {
+                    BookId = 4,
+                    BookTitle = "Essential Algorithms: A Practical Approach to Computer Algorithms Using Python and C#",
+                    BookUrlImage = "https://covers.zlibcdn2.com/covers/books/d3/8e/29/d38e29bd3aa485e5cdfda1a93699d64a.jpg",
+                    BookDownloadUrl = "https://za1lib.org/dl/4999553/984dd2"
+                },
+                new Book()
+                {
+                    BookId = 5,
+                    BookTitle = "Design Patterns in C#: A Hands-on Guide with Real-World Examples",
+                    BookUrlImage = "https://covers.zlibcdn2.com/covers/books/bc/16/59/bc165985d4176b3165e5e9e462298a23.jpg",
+                    BookDownloadUrl = "https://za1lib.org/dl/3525636/0771cb?dsource=recommend"
+                },
+                new Book() {
+                    BookId = 6,
+                    BookTitle = "The Road to learn React: Your journey to master plain yet pragmatic React.js",
+                    BookUrlImage = "https://covers.zlibcdn2.com/covers/books/1c/a8/0d/1ca80d2ca01ac4fe106c899900e9eecb.jpg",
+                    BookDownloadUrl = "https://za1lib.org/dl/3498746/a20a2a"
                 });
             #endregion
         }

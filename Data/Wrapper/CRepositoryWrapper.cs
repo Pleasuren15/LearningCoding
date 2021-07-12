@@ -10,6 +10,7 @@ namespace LearningCoding.Data.Wrapper
         AppDbContext _appDbContext { get; set; }
         IRepositoryProgrammingLanguage repositoryProgrammingLanguage;
         IRepositoryFeedback repositoryFeedback;
+        IRepositoryBook repositoryBook;
 
         public CRepositoryWrapper(AppDbContext appDbContext)
         {
@@ -33,6 +34,16 @@ namespace LearningCoding.Data.Wrapper
                 if (repositoryFeedback == null)
                     repositoryFeedback = new CRepositoryFeedback(_appDbContext);
                 return repositoryFeedback;
+            }
+        }
+
+        public IRepositoryBook _repositoryBook
+        {
+            get
+            {
+                if (repositoryBook == null)
+                    repositoryBook = new CRepositoryBook(_appDbContext);
+                return repositoryBook;
             }
         }
 

@@ -53,7 +53,7 @@ namespace LearningCoding.Controllers
 
         public IActionResult Books()
         {
-            return View();
+            return View(_repositoryWrapper._repositoryBook.FindAll().OrderBy(e => e.BookTitle));
         }
     }
 }

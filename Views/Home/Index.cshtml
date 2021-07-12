@@ -4,38 +4,40 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="container-fluid">
-    <partial name="_NavbarPartial">
-        <div class="container">
+<div class="container-fluid bg-index">
+    <div class="bg-tans">
+        <partial name="_NavbarPartial">
+            <div class="container">
+                <div class="home-intro">
+                    <h2 class="text-light">
+                        Coding is the process of creating instructions for computers using programming languages.
+                    </h2>
+                </div>
+            </div>
+    </div>
+</div>
 
-            <div class="bg-circle2"></div>
-            <div class="bg-circle3"></div>
-            <div class="home-intro">
-                <h2 class="text-light">
-                    Coding is the process of creating instructions for computers using programming languages.
+<div class="container">
+
+    <div class="programming-categories">
+        <a asp-controller="Home" asp-action="Index" asp-route-category="All">All</a>
+        <a asp-controller="Home" asp-action="Index" asp-route-category="High-level">High-Level</a>
+        <a asp-controller="Home" asp-action="Index" asp-route-category="Low-level">Low-Level</a>
+    </div>
+
+    <div class="programming-languages">
+        @foreach (var p in Model)
+        {
+            <div class="programming-language-card">
+                <div class="programming-language-card-top ">
+                    <img src="@p.ProgrammingLanguageImageUrl" alt="@p.ProgrammingLanguageName" />
+                </div>
+                <h2>
+                    <a asp-controller="Home" asp-action="LanguageInfo" asp-route-id="@p.ProgrammingLanguageId"
+                       class="text-light text-decoration-none">@p.ProgrammingLanguageName</a>
                 </h2>
+                <p>@p.ProgrammingLanguageCategory</p>
             </div>
-
-            <div class="programming-categories">
-                <a asp-controller="Home" asp-action="Index" asp-route-category="All">All</a>
-                <a asp-controller="Home" asp-action="Index" asp-route-category="High-level">High-Level</a>
-                <a asp-controller="Home" asp-action="Index" asp-route-category="Low-level">Low-Level</a>
-            </div>
-
-            <div class="programming-languages">
-                @foreach (var p in Model)
-                {
-                    <div class="programming-language-card">
-                        <div class="programming-language-card-top ">
-                            <img src="@p.ProgrammingLanguageImageUrl" alt="@p.ProgrammingLanguageName" />
-                        </div>
-                        <h2>
-                            <a asp-controller="Home" asp-action="LanguageInfo" asp-route-id="@p.ProgrammingLanguageId"
-                               class="text-light text-decoration-none">@p.ProgrammingLanguageName</a>
-                        </h2>
-                        <p>@p.ProgrammingLanguageCategory</p>
-                    </div>
-                }
-            </div>
-        </div>
+        }
+    </div>
 </div>
