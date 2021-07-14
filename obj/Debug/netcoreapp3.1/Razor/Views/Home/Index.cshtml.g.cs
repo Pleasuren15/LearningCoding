@@ -19,8 +19,15 @@ using LearningCoding.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\Views\_ViewImports.cshtml"
+using LearningCoding.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec6", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9848986b18538aa67ea7e088cec7c6b6365d3a02", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6d571fd4815b901fa2fa54b0ea35f48ab79ba830", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<ProgrammingLanguage>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", "_NavbarPartial", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -66,7 +73,7 @@ using LearningCoding.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"container-fluid bg-index\">\r\n    <div class=\"bg-tans\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec65921", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec66138", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -95,7 +102,7 @@ using LearningCoding.Models;
 
     <div class=""programming-categories"">
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec67448", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec67665", async() => {
                 WriteLiteral("All");
             }
             );
@@ -119,7 +126,7 @@ using LearningCoding.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec69336", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec69553", async() => {
                 WriteLiteral("High-Level");
             }
             );
@@ -143,7 +150,7 @@ using LearningCoding.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec611231", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec611448", async() => {
                 WriteLiteral("Low-Level");
             }
             );
@@ -195,7 +202,7 @@ WriteAttributeValue("", 1153, p.ProgrammingLanguageName, 1153, 26, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" />\r\n                </div>\r\n                <h2>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec614408", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ecb655bc2a63f21024d2a0a1dc3c762d61d5ec614625", async() => {
 #nullable restore
 #line 37 "C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\Views\Home\Index.cshtml"
                                                           Write(p.ProgrammingLanguageName);

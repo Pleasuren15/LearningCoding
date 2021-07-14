@@ -236,7 +236,7 @@ body {
 
 .font-weight-bold-2 {
     font-size: 15px;
-    font-weight:700;
+    font-weight: 700;
 }
 /*Home/Books.cshtml*/
 .books-dis {
@@ -252,6 +252,42 @@ body {
         width: 90%;
         border-radius: 5px;
         border: 2px solid #ccc;
+    }
+
+/*Account/Index.cshtml*/
+.header-h2 {
+    font: 400 30px 'Anton', sans-serif;
+    color: #fff;
+}
+
+.admin-count {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 7px;
+}
+
+.admin-count-text {
+    background: linear-gradient(45deg, rgba(0,255,209,1) 0%, rgba(220,20,60,1) 100%);
+    padding: 7px 14px;
+    border-radius: 7px;
+}
+
+    .admin-count-text:nth-child(odd) {
+        background: linear-gradient(45deg, rgba(220,20,60,1) 0%, rgba(0,255,209,1) 100%);
+    }
+
+    .admin-count-text p {
+        font: 400 20px 'Anton', sans-serif;
+        text-align: center;
+        color: white;
+    }
+
+    .admin-count-text h3 {
+        font: 700 20px 'Anton', sans-serif;
+        text-align: center;
+        color: white;
+        letter-spacing: 5px;
+        line-height: 0;
     }
 
 ::selection {

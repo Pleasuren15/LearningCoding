@@ -1,0 +1,63 @@
+﻿@model AdminViewModel
+
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<div class="container-fluid bg-index">
+    <div class="bg-tans">
+        <partial name="_NavbarPartial">
+            <div class="container">
+                <div class="home-intro">
+                    <h2 class="text-light">
+                        MANAGE YOUR DATA.
+                    </h2>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <h2 class="header-h2 col-8">ADMINISTRATION</h2>
+        <a class="text-danger col-4 text-right" asp-controller="Account" asp-action="Logout">Logout</a>
+    </div>
+
+    <div class="admin-count">
+        <div class="admin-count-text">
+            <p>Admins</p>
+            <h3>@Model._users.Count()</h3>
+        </div>
+        <div class="admin-count-text">
+            <p>Books</p>
+            <h3>@Model._books.Count()</h3>
+        </div>
+        <div class="admin-count-text">
+            <p>Feedbacks</p>
+            <h3>@Model._feedbacks.Count()</h3>
+        </div>
+        <div class="admin-count-text">
+            <p>Languages</p>
+            <h3>@Model._programmingLanguages.Count()</h3>
+        </div>
+    </div>
+    @*<h2 class="header-h2">Log In</h2>
+        <form asp-controller="Account" asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Email" class="text-light"></label>
+                <input asp-for="@Model.Email" type="text" class="form-control" value="Admin@LCInfo.ac.za" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Password" class="text-light"></label>
+                <input asp-for="@Model.Password" type="password" class="form-control" value="Secret123#" />
+                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary">login</button>
+                <button type="reset" class="btn btn-danger">clear</button>
+            </div>
+        </form>*@
+</div>

@@ -61,6 +61,8 @@ namespace LearningCoding
                     name: "default",
                     pattern: "{Controller=Home}/{Action=Index}/{Id?}");
             });
+
+            AppDbContextIdentity.CreateAdmin(_configuration, app.ApplicationServices).Wait();
         }
     }
 }

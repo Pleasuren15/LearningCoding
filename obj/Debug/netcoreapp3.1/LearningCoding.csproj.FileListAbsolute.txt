@@ -75,7 +75,6 @@ C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\shared\_NavbarPartial.cshtml.g.cs
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Home\Info.cshtml.g.cs
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Home\Books.cshtml.g.cs
-C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.csprojAssemblyReference.cache
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
@@ -83,3 +82,5 @@ C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\bin\Debug\
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.csproj.CoreCompileInputs.cache
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.MvcApplicationPartsAssemblyInfo.cache
+C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs
+C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.csprojAssemblyReference.cache
