@@ -18,7 +18,6 @@
 </div>
 
 <div class="container">
-
     <div class="row">
         <h2 class="header-h2 col-8">ADMINISTRATION</h2>
         <a class="text-danger col-4 text-right" asp-controller="Account" asp-action="Logout">Logout</a>
@@ -30,7 +29,7 @@
             <h3>@Model._users.Count()</h3>
         </div>
         <div class="admin-count-text">
-            <p>Books</p>
+            <p><a>Books</a></p>
             <h3>@Model._books.Count()</h3>
         </div>
         <div class="admin-count-text">
@@ -42,6 +41,30 @@
             <h3>@Model._programmingLanguages.Count()</h3>
         </div>
     </div>
+
+    <table class="table table-light table-sm mt-2 rounded table-borderless">
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var f in Model._feedbacks)
+            {
+                <tr>
+                    <td>@f.FeedbackEmail</td>
+                    <td>
+                        <a href="#" class="text-success">View</a> |
+                        <a href="#" class="text-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div paging-info="@Model._pagingInfoModel"></div>
+
+
     @*<h2 class="header-h2">Log In</h2>
         <form asp-controller="Account" asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>

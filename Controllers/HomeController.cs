@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LearningCoding.Data.Wrapper;
 using LearningCoding.Models;
+using LearningCoding.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,6 +14,7 @@ namespace LearningCoding.Controllers
     public class HomeController : Controller
     {
         IRepositoryWrapper _repositoryWrapper;
+        const int ITEMS_PER_PAGE = 8;
 
         public HomeController(IRepositoryWrapper repositoryWrapper)
         {
@@ -43,7 +45,7 @@ namespace LearningCoding.Controllers
         [HttpPost]
         public IActionResult Info(Feedback feedback)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _repositoryWrapper._repositoryFeedback.Create(feedback);
                 return RedirectToAction("Info", "Home");
@@ -51,9 +53,19 @@ namespace LearningCoding.Controllers
             return View();
         }
 
-        public IActionResult Books()
+        public IActionResult Books(int currentPage = 1)
         {
-            return View(_repositoryWrapper._repositoryBook.FindAll().OrderBy(e => e.BookTitle));
+            return View(new BooksViewModel()
+            {
+                _pagingInfoModel = new PagingInfo()
+                {
+                    CurrentPage = currentPage,
+                    ItemsPerPage = ITEMS_PER_PAGE,
+                    TotalItems = _repositoryWrapper._repositoryBook.FindAll().Count()
+                },
+                _books = _repositoryWrapper._repositoryBook.FindAll().OrderBy(e => e.BookTitle).
+                Skip(ITEMS_PER_PAGE * (currentPage - 1)).Take(ITEMS_PER_PAGE)
+            });
         }
     }
 }

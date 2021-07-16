@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Book>
+﻿@model BooksViewModel
 
 @{
     ViewData["Title"] = "Books";
@@ -23,11 +23,12 @@
     </form>
     <h6 class="font-weight-bold-2 text-success">*clicking on the image will automatically download book.</h6>
     <div class="books-dis">
-        @foreach (var b in Model)
+        @foreach (var b in Model._books)
         {
             <a href="@b.BookDownloadUrl">
                 <img src="@b.BookUrlImage" alt="@b.BookUrlImage" />
             </a>
         }
     </div>
+    <div class="mt-2" paging-info="@Model._pagingInfoModel"></div>
 </div>
