@@ -86,3 +86,4 @@ C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Language\Index.cshtml.g.cs
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\Razor\Views\shared\_FooterPartial.cshtml.g.cs
+C:\My_Stuff\Academics\Projects\GitHubProjects & Others\LearningCoding\obj\Debug\netcoreapp3.1\LearningCoding.csprojAssemblyReference.cache

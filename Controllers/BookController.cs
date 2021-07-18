@@ -15,7 +15,7 @@ namespace LearningCoding.Controllers
     {
         IRepositoryWrapper _repositoryWrapper;
         const int ITEMS_PER_PAGE = 10;
-        
+
         [TempData]
         public string Message { get; set; }
 
@@ -24,18 +24,19 @@ namespace LearningCoding.Controllers
             _repositoryWrapper = repositoryWrapper;
         }
 
-        public IActionResult Index(int currentPage = 1)
+        public IActionResult Index(int currentPage = 1, string searchBy = "")
         {
+            ViewData["SearchBy"] = searchBy;
             return View(new BooksViewModel()
             {
                 _pagingInfoModel = new PagingInfo()
                 {
                     CurrentPage = currentPage,
                     ItemsPerPage = ITEMS_PER_PAGE,
-                    TotalItems = _repositoryWrapper._repositoryBook.FindAll().Count()
+                    TotalItems = _repositoryWrapper._repositoryBook.FindByCondition(e => e.BookTitle.Contains(searchBy)).Count()
                 },
-                _books = _repositoryWrapper._repositoryBook.FindAll().OrderBy(e => e.BookTitle).
-                Skip(ITEMS_PER_PAGE * (currentPage - 1)).Take(ITEMS_PER_PAGE)
+                _books = _repositoryWrapper._repositoryBook.FindByCondition(e => e.BookTitle.Contains(searchBy))
+                    .OrderBy(e => e.BookTitle).Skip(ITEMS_PER_PAGE * (currentPage - 1)).Take(ITEMS_PER_PAGE)
             });
         }
 
