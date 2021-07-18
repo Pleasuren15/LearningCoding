@@ -1,0 +1,31 @@
+﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container-login">
+    <div class="bg-tans">
+        <div class="container-login-section">
+            <h2 class="header-h2 crimson-clr">LOG IN</h2>
+            <p class="crimson-clr">Sign in with your email and Password</p>
+            <form asp-controller="Account" asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>
+                <div class="form-group">
+                    <input asp-for="@Model.Email" type="text" class="form-control" value="Admin@LCInfo.ac.za" />
+                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="@Model.Password" type="password" class="form-control" value="Secret123#" />
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+
+                <div class="btn-group w-50 mt-1">
+                    <button type="submit" class="btn btn-primary">login</button>
+                    <a class="btn btn-danger" asp-controller="Home" asp-action="Index">home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -56,7 +56,7 @@ namespace LearningCoding.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(LoginViewModel loginModel)
+        public async Task<IActionResult> Login(LoginViewModel loginModel)
         {
             if (ModelState.IsValid)
             {
@@ -76,10 +76,16 @@ namespace LearningCoding.Controllers
         }
 
         [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Account");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

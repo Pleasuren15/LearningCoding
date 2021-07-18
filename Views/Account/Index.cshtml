@@ -90,22 +90,6 @@
         <a class="btn btn-success" asp-controller="Book" asp-action="Index">Books</a>
         <a class="btn btn-danger" asp-controller="Account" asp-action="Logout">Logout</a>
     </div>
-    @*<h2 class="header-h2">Log In</h2>
-        <form asp-controller="Account" asp-action="Index">
-            <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>
-            <div class="form-group">
-                <label asp-for="@Model.Email" class="text-light"></label>
-                <input asp-for="@Model.Email" type="text" class="form-control" value="Admin@LCInfo.ac.za" />
-                <span asp-validation-for="@Model.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="@Model.Password" class="text-light"></label>
-                <input asp-for="@Model.Password" type="password" class="form-control" value="Secret123#" />
-                <span asp-validation-for="@Model.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group mt-2">
-                <button type="submit" class="btn btn-primary">login</button>
-                <button type="reset" class="btn btn-danger">clear</button>
-            </div>
-        </form>*@
+
+    <partial name="_FooterPartial" />
 </div>
