@@ -9,6 +9,7 @@ namespace LearningCoding.Models.ViewModels
         public IEnumerable<Book> _books;
         public IEnumerable<Feedback> _feedbacks;
         public IEnumerable<ProgrammingLanguage> _programmingLanguages;
-        public PagingInfo _pagingInfoModel;
+        public PagingInfo _bookspagingInfoModel;
+        public PagingInfo _feedbackspagingInfoModel;
     }
 }

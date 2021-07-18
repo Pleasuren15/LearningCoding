@@ -31,7 +31,7 @@ namespace LearningCoding.Infrastructure
             {
                 TagBuilder a = new TagBuilder("a");
                 a.Attributes["href"] = urlHelper.Action(PageAction,
-                             new { currentPage = i + 1 });
+                             new { feedbackcurrentPage = i + 1 , bookcurrentPage = i + 1 });
                 a.Attributes["class"] = i + 1 == PagingInfo.CurrentPage ? "btn btn-dark" : "btn btn-primary";
                 a.InnerHtml.Append((i + 1).ToString());
                 result.InnerHtml.AppendHtml(a);

@@ -33,7 +33,7 @@
                     <img src="@p.ProgrammingLanguageImageUrl" alt="@p.ProgrammingLanguageName" />
                 </div>
                 <h2>
-                    <a asp-controller="Home" asp-action="LanguageInfo" asp-route-id="@p.ProgrammingLanguageId"
+                    <a asp-controller="Language" asp-action="Index" asp-route-id="@p.ProgrammingLanguageId"
                        class="text-light text-decoration-none">@p.ProgrammingLanguageName</a>
                 </h2>
                 <p>@p.ProgrammingLanguageCategory</p>

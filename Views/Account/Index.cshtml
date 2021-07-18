@@ -18,10 +18,8 @@
 </div>
 
 <div class="container">
-    <div class="row">
         <h2 class="header-h2 col-8">ADMINISTRATION</h2>
-        <a class="text-danger col-4 text-right" asp-controller="Account" asp-action="Logout">Logout</a>
-    </div>
+        @*<a class="text-danger col-4 text-right" asp-controller="Account" asp-action="Logout">Logout</a>*@
 
     <div class="admin-count">
         <div class="admin-count-text">
@@ -44,14 +42,15 @@
 
     <div class="btn-group mt-2 ">
         <a class="btn btn-danger" asp-controller="Book" asp-action="Add">Add Book</a>
-        <a class="btn btn-success" href="#">Add Language</a>
+        <a class="btn btn-success" asp-controller="Home" asp-action="Index">Languages</a>
+        <a class="btn btn-success" asp-controller="Book" asp-action="Index">Books</a>
     </div>
 
-    <table class="table table-light mt-2">
-        <caption>list of feedbacks</caption>
+    <table class="table table-sm table-dark table-striped rounded mt-2 text-light">
+        <caption>Feedbacks</caption>
         <thead>
             <tr>
-                <th>Sender</th>
+                <th>Email</th>
                 <th>Manage</th>
             </tr>
         </thead>
@@ -61,15 +60,37 @@
                 <tr>
                     <td>@f.FeedbackEmail</td>
                     <td>
-                        <a href="#" class="text-success">View</a> |
-                        <a href="#" class="text-danger">Delete</a>
+                        <a href="#" class="text-success font-weight-bold-2">View</a> |
+                        <a href="#" class="text-danger font-weight-bold-2">Delete</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+    <div paging-info="@Model._feedbackspagingInfoModel"></div>
 
-    <div paging-info="@Model._pagingInfoModel"></div>
+    <table class="table table-sm table-dark table-striped rounded mt-2 text-light">
+        <caption>Books</caption>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var f in Model._books)
+            {
+                <tr>
+                    <td>@f.BookTitle</td>
+                    <td>
+                        <a href="#" class="text-success font-weight-bold-2">View</a> |
+                        <a href="#" class="text-danger font-weight-bold-2">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div paging-info="@Model._bookspagingInfoModel"></div>
     @*<h2 class="header-h2">Log In</h2>
         <form asp-controller="Account" asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>

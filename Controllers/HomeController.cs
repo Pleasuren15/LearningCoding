@@ -52,20 +52,5 @@ namespace LearningCoding.Controllers
             }
             return View();
         }
-
-        public IActionResult Books(int currentPage = 1)
-        {
-            return View(new BooksViewModel()
-            {
-                _pagingInfoModel = new PagingInfo()
-                {
-                    CurrentPage = currentPage,
-                    ItemsPerPage = ITEMS_PER_PAGE,
-                    TotalItems = _repositoryWrapper._repositoryBook.FindAll().Count()
-                },
-                _books = _repositoryWrapper._repositoryBook.FindAll().OrderBy(e => e.BookTitle).
-                Skip(ITEMS_PER_PAGE * (currentPage - 1)).Take(ITEMS_PER_PAGE)
-            });
-        }
     }
 }

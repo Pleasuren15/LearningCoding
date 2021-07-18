@@ -29,22 +29,29 @@ namespace LearningCoding.Controllers
 
         // GET: /<controller>/
         [HttpGet]
-        public async Task<IActionResult> Index(int currentPage = 1)
+        public async Task<IActionResult> Index(int feedbackcurrentPage = 1, int bookcurrentPage = 1)
         {
             await Logout();
             return View(new AdminViewModel()
             {
-                _books = _repositoryWrapper._repositoryBook.FindAll(),
+                _books = _repositoryWrapper._repositoryBook.FindAll().
+                            Skip(ITEMS_PER_PAGE * (bookcurrentPage - 1)).Take(ITEMS_PER_PAGE),
                 _programmingLanguages = _repositoryWrapper._repositoryProgramming.FindAll(),
                 _users = _userManager.Users,
-                _pagingInfoModel = new PagingInfo()
+                _feedbackspagingInfoModel = new PagingInfo()
                 {
-                    CurrentPage = currentPage,
+                    CurrentPage = feedbackcurrentPage,
                     ItemsPerPage = ITEMS_PER_PAGE,
                     TotalItems = _repositoryWrapper._repositoryFeedback.FindAll().Count()
                 },
+                _bookspagingInfoModel = new PagingInfo()
+                {
+                    CurrentPage = bookcurrentPage,
+                    ItemsPerPage = ITEMS_PER_PAGE,
+                    TotalItems = _repositoryWrapper._repositoryBook.FindAll().Count()
+                },
                 _feedbacks = _repositoryWrapper._repositoryFeedback.FindAll().
-                            Skip(ITEMS_PER_PAGE * (currentPage - 1)).Take(ITEMS_PER_PAGE)
+                            Skip(ITEMS_PER_PAGE * (feedbackcurrentPage - 1)).Take(ITEMS_PER_PAGE)
             });
         }
 
