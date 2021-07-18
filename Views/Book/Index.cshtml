@@ -18,17 +18,19 @@
 </div>
 
 <div class="container">
-    <form>
-        <input type="text" class="form-control" placeholder="search..." />
-    </form>
-    <h6 class="font-weight-bold-2 text-success">*clicking on the image will automatically download book.</h6>
+    <div class="ml-3">
+        <form>
+            <input type="text" class="form-control" placeholder="search..." />
+        </form>
+        <h6 class="font-weight-bold-2 text-success">click on image to download</h6>
+    </div>
     <div class="books-dis">
         @foreach (var b in Model._books)
         {
             <a href="@b.BookDownloadUrl">
-                <img src="@b.BookUrlImage" alt="@b.BookUrlImage" />
+                <img src="@b.BookUrlImage" class="d-block mx-auto" alt="@b.BookUrlImage" />
             </a>
         }
     </div>
-    <div class="mt-2" paging-info="@Model._pagingInfoModel"></div>
+    <div class="mt-2 ml-3" paging-info="@Model._pagingInfoModel"></div>
 </div>

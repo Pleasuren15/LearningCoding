@@ -13,6 +13,7 @@ body {
 
 .bg-tans {
     background-color: rgba(0,0,0,0.7);
+    height: 100%;
 }
 
 .bg-index {
@@ -70,11 +71,9 @@ body {
 /*Home/Index.cshtml*/
 .home-intro {
     font-family: 'Anton', sans-serif;
-    height: 26vh;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-left: 15px;
+    padding: 10vh 0px;
 }
 
 .programming-categories {
@@ -238,6 +237,7 @@ body {
     font-size: 15px;
     font-weight: 700;
 }
+
 /*Home/Books.cshtml*/
 .books-dis {
     display: grid;
@@ -263,19 +263,14 @@ body {
 .admin-count {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 7px;
+    column-gap: 5px;
 }
 
 .admin-count-text {
-    background: linear-gradient(45deg, rgba(0,255,209,1) 0%, rgba(220,20,60,1) 100%);
+    background-color: #de2234;
     padding: 7px 14px;
-    border-radius: 7px;
+    border-radius: 4px;
 }
-
-    .admin-count-text:nth-child(odd) {
-        background: linear-gradient(45deg, rgba(220,20,60,1) 0%, rgba(0,255,209,1) 100%);
-    }
-
     .admin-count-text p {
         font: 400 20px 'Anton', sans-serif;
         text-align: center;
@@ -290,7 +285,79 @@ body {
         line-height: 0;
     }
 
+.btn-w100 {
+    width: 100%;
+}
 ::selection {
     background-color: yellow;
     color: black;
+}
+
+@media (max-width: 992px) {
+    .programming-languages {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .books-dis {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .admin-count {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programming-languages {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-intro h2 {
+        font-size: 25px;
+    }
+
+    .pros-cons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+
+    .books-dis {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 7px;
+    }
+}
+
+@media (max-width: 600px) {
+    .programming-languages {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .pros-cons {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0px;
+    }
+
+    .books-dis {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .admin-count {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:7px;
+    }
 }

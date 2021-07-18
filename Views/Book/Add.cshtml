@@ -19,31 +19,29 @@
 
 <div class="container">
     <h6 class="font-weight-bold-2 text-success">@ViewData["BookMessage"]</h6>
-    <div class="w-75">
-        <form asp-controller="Book" asp-action="Add">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="@Model.BookTitle" class="text-light"></label>
-                <input asp-for="@Model.BookTitle" type="text" class="form-control" placeholder="Be a pro with .NET" />
-                <span asp-validation-for="@Model.BookTitle" class="text-danger"></span>
-            </div>
+    <form asp-controller="Book" asp-action="Add">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="@Model.BookTitle" class="text-light"></label>
+            <input asp-for="@Model.BookTitle" type="text" class="form-control" placeholder="Be a pro with .NET" />
+            <span asp-validation-for="@Model.BookTitle" class="text-danger"></span>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="@Model.BookUrlImage" class="text-light"></label>
-                <input asp-for="@Model.BookUrlImage" type="text" class="form-control" placeholder="https://covers.zlibcdn2.com/covers299/books/c6/16/b1/c616b1fd19309d5b2570b990d5b82c6c.jpg" />
-                <span asp-validation-for="@Model.BookUrlImage" class="text-danger"></span>
-            </div>
+        <div class="form-group">
+            <label asp-for="@Model.BookUrlImage" class="text-light"></label>
+            <input asp-for="@Model.BookUrlImage" type="text" class="form-control" placeholder="https://covers.zlibcdn2.com/covers299/books/c6/16/b1/c616b1fd19309d5b2570b990d5b82c6c.jpg" />
+            <span asp-validation-for="@Model.BookUrlImage" class="text-danger"></span>
+        </div>
 
-            <div class="form-group">
-                <label asp-for="@Model.BookDownloadUrl" class="text-light"></label>
-                <input asp-for="@Model.BookDownloadUrl" type="text" class="form-control" placeholder="https://za1lib.org/dl/3402134/938b3e" />
-                <span asp-validation-for="@Model.BookDownloadUrl" class="text-danger"></span>
-            </div>
+        <div class="form-group">
+            <label asp-for="@Model.BookDownloadUrl" class="text-light"></label>
+            <input asp-for="@Model.BookDownloadUrl" type="text" class="form-control" placeholder="https://za1lib.org/dl/3402134/938b3e" />
+            <span asp-validation-for="@Model.BookDownloadUrl" class="text-danger"></span>
+        </div>
 
-            <div class="btn-group mt-2">
-                <button type="submit" class="btn btn-info">Add</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
-            </div>
-        </form>
-    </div>
+        <div class="btn-group mt-2">
+            <button type="submit" class="btn btn-info">Add</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+    </form>
 </div>

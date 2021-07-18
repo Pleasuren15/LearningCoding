@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="home-intro">
                     <h2 class="text-light">
-                        MANAGE YOUR DATA.
+                        ADMINISTRATION, MANAGE YOUR DATA.
                     </h2>
                 </div>
             </div>
@@ -18,8 +18,7 @@
 </div>
 
 <div class="container">
-        <h2 class="header-h2 col-8">ADMINISTRATION</h2>
-        @*<a class="text-danger col-4 text-right" asp-controller="Account" asp-action="Logout">Logout</a>*@
+    @*<a class="text-danger col-4 text-right" asp-controller="Account" asp-action="Logout">Logout</a>*@
 
     <div class="admin-count">
         <div class="admin-count-text">
@@ -40,17 +39,11 @@
         </div>
     </div>
 
-    <div class="btn-group mt-2 ">
-        <a class="btn btn-danger" asp-controller="Book" asp-action="Add">Add Book</a>
-        <a class="btn btn-success" asp-controller="Home" asp-action="Index">Languages</a>
-        <a class="btn btn-success" asp-controller="Book" asp-action="Index">Books</a>
-    </div>
-
     <table class="table table-sm table-dark table-striped rounded mt-2 text-light">
         <caption>Feedbacks</caption>
         <thead>
             <tr>
-                <th>Email</th>
+                <th>Name</th>
                 <th>Manage</th>
             </tr>
         </thead>
@@ -58,10 +51,9 @@
             @foreach (var f in Model._feedbacks)
             {
                 <tr>
-                    <td>@f.FeedbackEmail</td>
+                    <td>@f.FeedbackName</td>
                     <td>
-                        <a href="#" class="text-success font-weight-bold-2">View</a> |
-                        <a href="#" class="text-danger font-weight-bold-2">Delete</a>
+                        <a href="#" class="text-success font-weight-bold-2">View</a>&nbsp;<a href="#" class="text-danger font-weight-bold-2">Delete</a>
                     </td>
                 </tr>
             }
@@ -83,7 +75,7 @@
                 <tr>
                     <td>@f.BookTitle</td>
                     <td>
-                        <a href="#" class="text-success font-weight-bold-2">View</a> |
+                        <a href="#" class="text-success font-weight-bold-2">View</a>&nbsp;
                         <a href="#" class="text-danger font-weight-bold-2">Delete</a>
                     </td>
                 </tr>
@@ -91,6 +83,13 @@
         </tbody>
     </table>
     <div paging-info="@Model._bookspagingInfoModel"></div>
+
+    <div class="btn-group mt-2 btn-w100">
+        <a class="btn btn-success" asp-controller="Book" asp-action="Add">Add Book</a>
+        <a class="btn btn-success" asp-controller="Home" asp-action="Index">Languages</a>
+        <a class="btn btn-success" asp-controller="Book" asp-action="Index">Books</a>
+        <a class="btn btn-danger" asp-controller="Account" asp-action="Logout">Logout</a>
+    </div>
     @*<h2 class="header-h2">Log In</h2>
         <form asp-controller="Account" asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>
