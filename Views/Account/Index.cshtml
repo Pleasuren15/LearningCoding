@@ -42,7 +42,13 @@
         </div>
     </div>
 
-    <table class="table table-light table-sm mt-2 rounded table-borderless">
+    <div class="btn-group mt-2 ">
+        <a class="btn btn-danger" asp-controller="Book" asp-action="Add">Add Book</a>
+        <a class="btn btn-success" href="#">Add Language</a>
+    </div>
+
+    <table class="table table-light mt-2">
+        <caption>list of feedbacks</caption>
         <thead>
             <tr>
                 <th>Sender</th>
@@ -62,9 +68,8 @@
             }
         </tbody>
     </table>
+
     <div paging-info="@Model._pagingInfoModel"></div>
-
-
     @*<h2 class="header-h2">Log In</h2>
         <form asp-controller="Account" asp-action="Index">
             <div asp-validation-summary="ModelOnly" class="text-danger ml-4"></div>

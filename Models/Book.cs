@@ -23,7 +23,6 @@ namespace LearningCoding.Models
 
         [Required]
         [DisplayName("Download url")]
-        [Range(1, 5)]
         public string BookDownloadUrl { get; set; }
     }
 }
